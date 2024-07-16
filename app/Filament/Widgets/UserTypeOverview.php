@@ -13,6 +13,7 @@ class UserTypeOverview extends BaseWidget
     protected function getStats(): array
     {
         return [
+            Stat::make('Tenants', Tenant::count()),
             Stat::make('Tenant Admins', User::query()->whereNotNull('tenant_id')->distinct('tenant_id')->count()),
             Stat::make('Marketers', Tenant::query()->whereNotNull('marketer_id')->distinct('marketer_id')->count()),
             // Stat::make('Customers', DB::table('customer_tenant')->whereNotNull('user_id')->distinct('user_id')->count()),

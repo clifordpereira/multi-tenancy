@@ -112,7 +112,7 @@ class TenantResource extends Resource
                 Tables\Columns\TextColumn::make('marketer.name')->label('Marketer')->searchable(),
                 Tables\Columns\TextColumn::make('district'),
                 Tables\Columns\TextColumn::make('place')->searchable(),
-                Tables\Columns\TextColumn::make('address'),
+                Tables\Columns\TextColumn::make('address')->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('pincode')->searchable(),
                 Tables\Columns\TextColumn::make('phone')->searchable(),
                 Tables\Columns\TextColumn::make('latitude')->toggleable(isToggledHiddenByDefault: true),

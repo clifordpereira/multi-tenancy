@@ -1,14 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Traits;
 
 use App\Models\Tenant;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/**
- * to be used by models that needs multi-tenancy
- */
 trait MultiTenancy
 {
     protected static function booted(): void

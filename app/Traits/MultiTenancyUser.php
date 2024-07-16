@@ -1,13 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Traits;
 
 use App\Models\Tenant;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-/** 
- * to be used by User model
- */
 trait MultiTenancyUser
 {
     public function tenant() : BelongsTo {

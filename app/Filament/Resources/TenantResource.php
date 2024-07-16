@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\TenantResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\TenantResource\RelationManagers;
+use App\Filament\Resources\TenantResource\RelationManagers\TenantAdminsRelationManager;
 
 class TenantResource extends Resource
 {
@@ -165,7 +166,7 @@ class TenantResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            TenantAdminsRelationManager::class,
         ];
     }
 

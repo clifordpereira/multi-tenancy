@@ -88,17 +88,17 @@ class TenantResource extends Resource
                     ->schema([
                         Forms\Components\Select::make('visibility')
                             ->options([
-                                'public' => 'Public',
-                                'private' => 'Private',
+                                'Public' => 'Public',
+                                'Private' => 'Private',
                             ])
-                            ->default('public')
+                            ->default('Public')
                             ->required(),
                         Forms\Components\Select::make('subscription_status')
                             ->options([
-                                'active' => 'Active',
-                                'inactive' => 'Inactive',
+                                'Active' => 'Active',
+                                'Inactive' => 'Inactive',
                             ])
-                            ->default('active')
+                            ->default('Active')
                             ->required(),
                     ]),
             ]);

@@ -61,4 +61,9 @@ class User extends Authenticatable implements FilamentUser
             default => null 
         };
     }
+
+    public function tenant()
+    {
+        return $this->belongsTo(Tenant::class);
+    }
 }
